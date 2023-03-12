@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    app:cardCornerRadius="10dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:background="@color/light"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="120dp"
+        android:layout_height="160dp">
+
+        <ImageView
+            android:id="@+id/latestimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cropToPadding="false"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/el0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/latestadd"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/baseline_add_24"
+            android:foregroundGravity="center"
+            android:background="@drawable/shape3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <TextView
+            android:id="@+id/latestcategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape4"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@color/black"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/games"
+            app:layout_constraintStart_toStartOf="@id/latestprice"
+            app:layout_constraintBottom_toTopOf="@id/latestgood"
+            android:layout_marginBottom="5dp"
+            />
+
+        <TextView
+            android:id="@+id/latestgood"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/play_station_5_console"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:maxLines="2"
+            android:fontFamily="@font/montserrat"
+            app:layout_constraintStart_toStartOf="@id/latestprice"
+            app:layout_constraintTop_toTopOf="@id/latestadd"
+            android:layout_marginTop="-15dp"
+            app:layout_constraintEnd_toStartOf="@id/latestadd"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_90_000"
+            android:textSize="8sp"
+            android:textColor="@color/red"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/latestadd"
+            android:layout_marginStart="10dp"
+            android:id="@+id/latestprice"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
